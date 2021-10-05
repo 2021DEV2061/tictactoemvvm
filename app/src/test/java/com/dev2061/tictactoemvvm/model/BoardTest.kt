@@ -2,7 +2,6 @@ package com.dev2061.tictactoemvvm.model
 
 import org.junit.Assert.assertEquals
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 
 class BoardTest {
