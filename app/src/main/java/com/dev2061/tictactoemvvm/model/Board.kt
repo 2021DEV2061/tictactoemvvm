@@ -5,6 +5,10 @@ class Board {
     var squares = Array<Array<Square?>>(BOARD_SIZE) { arrayOfNulls(size = BOARD_SIZE) }
     var currentPlayer: Player? = Player.X
 
+    fun checkEndGame(): Boolean {
+        return false
+    }
+
     fun changePlayer() {
         currentPlayer = if (currentPlayer == Player.X) Player.O else Player.X
     }

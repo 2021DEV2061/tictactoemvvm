@@ -63,6 +63,45 @@ class BoardTest {
         Assert.assertTrue(actualResult)
     }
 
+    @Test
+    fun Verify_HorizontalWinner() {
+        //Arrange
+        val square = Square(Player.X)
+        board.squares[1][0] = square
+        board.squares[1][1] = square
+        board.squares[1][2] = square
+        //Act
+        val actualResult = board.checkEndGame()
+        //Assert
+        Assert.assertTrue(actualResult)
+    }
+
+    @Test
+    fun Verify_VerticalWinner() {
+        //Arrange
+        val square = Square(Player.X)
+        board.squares[0][2] = square
+        board.squares[1][2] = square
+        board.squares[2][2] = square
+        //Act
+        val actualResult = board.checkEndGame()
+        //Assert
+        Assert.assertTrue(actualResult)
+    }
+
+    @Test
+    fun Verify_DiagonalWinner() {
+        //Arrange
+        val square = Square(Player.X)
+        board.squares[0][2] = square
+        board.squares[1][1] = square
+        board.squares[2][0] = square
+        //Act
+        val actualResult = board.checkEndGame()
+        //Assert
+        Assert.assertTrue(actualResult)
+    }
+
 }
 
 
