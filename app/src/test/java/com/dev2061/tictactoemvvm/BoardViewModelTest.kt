@@ -20,8 +20,8 @@ class BoardViewModelTest {
         //Arrange
 
         //Act
-        vm.onBoardSquareClicked(1,0)
+        vm.onBoardSquareClicked(0,1)
         //Assert
-        Assert.assertEquals(Player.O, vm.squares["10"])
+        Assert.assertEquals(Player.X.name, vm.squares["01"])
     }
 }

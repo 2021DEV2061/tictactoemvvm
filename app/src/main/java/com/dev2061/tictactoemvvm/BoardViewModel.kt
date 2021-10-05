@@ -15,5 +15,12 @@ class BoardViewModel : ViewModel() {
     }
 
     fun onBoardSquareClicked(row: Int, column: Int) {
+        val appendedString = appendString(row, column)
+        squares[appendedString] = board.currentPlayer?.name
+
+        board.changePlayer()
     }
 }
+
+//With this function all the input digits are being appended into 1 string
+fun appendString(vararg digits: Int) = digits.joinTo(StringBuilder(), separator = "").toString()
