@@ -3,6 +3,7 @@ package com.dev2061.tictactoemvvm
 import androidx.databinding.ObservableArrayMap
 import androidx.lifecycle.ViewModel
 import com.dev2061.tictactoemvvm.model.Board
+import com.dev2061.tictactoemvvm.model.Square
 
 class BoardViewModel : ViewModel() {
 
@@ -15,10 +16,13 @@ class BoardViewModel : ViewModel() {
     }
 
     fun onBoardSquareClicked(row: Int, column: Int) {
-        val appendedString = appendString(row, column)
-        squares[appendedString] = board.currentPlayer?.name
+        if (null == board.squares[row][column]) {
+            board.squares[row][column] = Square(board.currentPlayer)
+            val appendedString = appendString(row, column)
+            squares[appendedString] = board.currentPlayer?.name
 
-        board.changePlayer()
+            board.changePlayer()
+        }
     }
 }
 
