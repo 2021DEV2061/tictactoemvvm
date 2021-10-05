@@ -1,11 +1,18 @@
 package com.dev2061.tictactoemvvm.model
 
+import androidx.lifecycle.MutableLiveData
+
 class Board {
 
+    var winner = MutableLiveData<Player>()
     var squares = Array<Array<Square?>>(BOARD_SIZE) { arrayOfNulls(size = BOARD_SIZE) }
     var currentPlayer: Player? = Player.X
 
     fun checkEndGame(): Boolean {
+        if (checkIfSquaresIdenticalInColumn() || checkIfSquaresIdenticalInRow() || checkIfSquaresIdenticalDiagonal()) {
+            winner.value = currentPlayer
+            return true
+        }
         return false
     }
 
