@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.dev2061.tictactoemvvm.viewmodel.BoardViewModel" />
+    </data>
 
     <GridLayout
         android:id="@+id/grid_id"
@@ -59,4 +63,4 @@
             android:background="@drawable/s22" />
 
     </GridLayout>
-</RelativeLayout>
+</layout>
