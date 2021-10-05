@@ -3,12 +3,15 @@ package com.dev2061.tictactoemvvm
 import androidx.databinding.ObservableArrayMap
 import androidx.lifecycle.ViewModel
 import com.dev2061.tictactoemvvm.model.Board
+import com.dev2061.tictactoemvvm.model.Player
 import com.dev2061.tictactoemvvm.model.Square
 
 class BoardViewModel : ViewModel() {
 
     lateinit var squares: ObservableArrayMap<String, String>
     lateinit var board: Board
+
+    fun getWinner() = Player.NA
 
     fun startGame() {
         squares = ObservableArrayMap()
