@@ -108,6 +108,20 @@ class BoardTest {
         Assert.assertTrue(actualResult)
     }
 
+    @Test
+    fun Verify_BoardIsFull(){
+        board.squares[0][0] = Square(Player.X)
+        board.squares[1][0] = Square(Player.O)
+        board.squares[2][0] = Square(Player.X)
+        board.squares[0][1] = Square(Player.O)
+        board.squares[1][1] = Square(Player.X)
+        board.squares[2][1] = Square(Player.O)
+        board.squares[0][2] = Square(Player.X)
+        board.squares[1][2] = Square(Player.O)
+        board.squares[2][2] = Square(Player.X)
+        Assert.assertTrue(board.areAllSquaresFilledIn())
+    }
+
 }
 
 

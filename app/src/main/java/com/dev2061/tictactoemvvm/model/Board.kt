@@ -44,6 +44,10 @@ class Board {
     private fun checkIfSquaresIdentical(vararg squares: Square?) =
         (1 until squares.size).none { squares[0] == null || squares[0] != squares[it] }
 
+    fun areAllSquaresFilledIn(): Boolean{
+        return false
+    }
+
     companion object {
         private const val BOARD_SIZE = 3
     }
