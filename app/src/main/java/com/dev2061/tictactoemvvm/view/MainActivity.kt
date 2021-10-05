@@ -1,7 +1,8 @@
-package com.dev2061.tictactoemvvm
+package com.dev2061.tictactoemvvm.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dev2061.tictactoemvvm.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

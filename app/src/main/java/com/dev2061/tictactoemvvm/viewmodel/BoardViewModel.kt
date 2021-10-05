@@ -1,4 +1,4 @@
-package com.dev2061.tictactoemvvm
+package com.dev2061.tictactoemvvm.viewmodel
 
 import androidx.databinding.ObservableArrayMap
 import androidx.lifecycle.ViewModel
