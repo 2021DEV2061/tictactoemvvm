@@ -24,4 +24,15 @@ class BoardViewModelTest {
         //Assert
         Assert.assertEquals(Player.X.name, vm.squares["01"])
     }
+
+    @Test
+    fun Verify_OverrideSquareNotPossible() {
+        //Arrange
+
+        //Act
+        vm.onBoardSquareClicked(2, 2)
+        vm.onBoardSquareClicked(2, 2)
+        //Assert
+        Assert.assertEquals(Player.X.name, vm.squares["22"])
+    }
 }
