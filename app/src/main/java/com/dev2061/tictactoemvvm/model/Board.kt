@@ -13,6 +13,10 @@ class Board {
             winner.value = currentPlayer
             return true
         }
+        if (areAllSquaresFilledIn()) {
+            winner.value = Player.NA
+            return true
+        }
         return false
     }
 

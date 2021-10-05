@@ -17,7 +17,7 @@ class BoardViewModelTest {
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Before
-    fun setup(){
+    fun setup() {
         vm = BoardViewModel()
         vm.startGame()
     }
@@ -27,7 +27,7 @@ class BoardViewModelTest {
         //Arrange
 
         //Act
-        vm.onBoardSquareClicked(0,1)
+        vm.onBoardSquareClicked(0, 1)
         //Assert
         Assert.assertEquals(Player.X.name, vm.squares["01"])
     }
@@ -54,4 +54,20 @@ class BoardViewModelTest {
         vm.getWinner()
         assertEquals(Player.O.name, vm.board.winner.value.toString())
     }
+
+    @Test
+    fun Verify_NoWinner() {
+        vm.onBoardSquareClicked(0, 0)
+        vm.onBoardSquareClicked(0, 1)
+        vm.onBoardSquareClicked(0, 2)
+        vm.onBoardSquareClicked(1, 1)
+        vm.onBoardSquareClicked(1, 0)
+        vm.onBoardSquareClicked(2, 0)
+        vm.onBoardSquareClicked(2, 1)
+        vm.onBoardSquareClicked(2, 2)
+        vm.onBoardSquareClicked(1, 2)
+        vm.getWinner()
+        assertEquals(Player.NA.name, vm.board.winner.value.toString())
+    }
+
 }
