@@ -21,16 +21,16 @@ After cloning the repo and opening the project in Android Studio, you can run th
 
 # How to run the tests
 For running the tests, please navigate to following project directory:
-    - For Unit tests:
+For Unit tests:
         *app/src/test/java/com/dev2061/tictactoemvvm/model/BoardTest.kt*
         *app/src/test/java/com/dev2061/tictactoemvvm/viewmodel/BoardViewModelTest.kt*
 
-        The Unit tests can be run by clicking on the left of the Test method name on the run button
+The Unit tests can be run by clicking on the left of the Test method name on the run button
 
-    - For UI Espresso tests:
+For UI Espresso tests:
         *app/src/androidTest/java/com/dev2061/tictactoemvvm/MainActivityTest.kt*
 
-        The Ui tests can be run by editing the configuration to the chosen Test of the file and followed by clicking on the run button (green triangle) in the toolbar
+The Ui tests can be run by editing the configuration to the chosen Test of the file and followed by clicking on the run button (green triangle) in the toolbar
 
 
 # Technologies used:
