@@ -1,4 +1,4 @@
-package com.dev2061.tictactoemvvm
+package com.dev2061.tictactoemvvm.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.dev2061.tictactoemvvm.model.Player
